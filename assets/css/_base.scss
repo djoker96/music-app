@@ -1,0 +1,36 @@
+@import url('https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css');
+
+html
+{
+    font-size: 62.5%;
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-size: 1.5rem;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    color: var(--white-color);
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    font-weight: 700;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+ul
+{
+    list-style: none;
+    padding: 0;
+}
