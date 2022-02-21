@@ -48,7 +48,7 @@
         a
         {
             display: flex;
-            color: var(--white-color);
+            color: var(--text-color);
             opacity: .7;
 
             &:hover
@@ -82,4 +82,67 @@
         
         margin-left: 4rem;
     }
+}
+
+
+// Header Content
+header#header-content
+{
+
+}
+
+// Search
+form.search
+{
+    max-width: 60%;
+    div.search__container
+    {
+        display: flex;
+        align-items: center;
+        padding: 1rem 2rem;
+        background-color: var(--alpha-bg);
+        border-radius: 99rem;
+        
+        &:focus
+        {
+            background-color: var(--primary-color);
+        }
+
+
+        button
+        {
+            margin: 0;
+            padding: 0;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            color: var(--text-color);
+
+        }
+
+        div.input-wrapper
+        {
+            flex-grow: 1;
+
+            input
+            {
+                width: 100%;
+                color: var(--text-color);
+                outline: none;
+                border: none;
+                padding-left: .8rem;
+
+                &::placeholder
+                {
+                    color: var(--text-color);
+                }
+            }
+        }    
+    }
+
+    ul.suggest__list
+    {
+        display: none;
+    }
+
 }

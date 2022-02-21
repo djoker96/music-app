@@ -16,7 +16,7 @@ body
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
-    color: var(--white-color);
+    color: var(--text-color);
 }
 
 h1, h2, h3, h4, h5, h6
@@ -33,4 +33,14 @@ ul
 {
     list-style: none;
     padding: 0;
+}
+
+button, input, optgroup, select, textarea 
+{
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    word-break: normal;
 }

@@ -45,21 +45,25 @@ aside#aside
     &.left
     {
         
-        border-right: 1px solid rgba(#fff, .2);
+        border-right: 1px solid var(--divider-color);
     }
 
     &.right
     {
-        border-left: 1px solid rgba(#fff, .2);
+        border-left: 1px solid var(--divider-color);
     }
 
     
     
 }
 
-main#main-content
+main#container
 {
 
-    padding: 2rem;
+    header#header-content
+    {
+        padding: 1rem 3rem;
+        border-bottom: 1px solid var(--divider-color);
+    }
     
 }
