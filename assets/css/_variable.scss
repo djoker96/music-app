@@ -7,4 +7,10 @@
     --text-color: #eee;
     --divider-color: rgba(225, 225, 225, .15);
     --alpha-bg: hsla(0,0%,100%,0.1);
+    --alpha-bg-02: hsla(0,0%,100%,0.2);
+}
+
+
+@mixin trans {
+    transition: .2s ease-in;
 }

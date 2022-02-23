@@ -2,10 +2,43 @@
 .account
 {
     display: flex;
+    padding: 2rem;
 
     &__avatar
     {
+        height: 6rem;
         margin: 0;
+        position: relative;
+        
+        &::after
+        {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 115%;
+            height: 115%;
+            border-radius: 100rem;
+            z-index: -1;
+            background-size: 400% 400%;
+            animation: gradient 5s ease alternate infinite;
+            background-image: linear-gradient(-45deg,#fc6c8f,#ff2ced,#ffb86c,#2cccff,#20e3b2,#ffcc70,#c850c0,#4158d0);
+            
+        }
+            
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
 
         img
         {
@@ -49,28 +82,55 @@
         {
             display: flex;
             color: var(--text-color);
-            opacity: .7;
+            gap: 1.6rem;
+            
 
             &:hover
             {
                 opacity: 1;
             }
+
+            span.menu-icon
+            {
+                display: flex;
+            }
+
         }
 
         >li.menu-item
         {
-            margin-bottom: 1.8rem;
-
+            
             >a.menu-link
             {
+                position: relative;
+                padding: .8rem 2rem;
                 font-weight: 600;
                 text-transform: uppercase;
 
-                i
+
+                &:hover,
+                &.active
                 {
-                    font-size: 2.2rem;
-                    margin-right: 1.2rem;
+                    background-color: var(--alpha-bg);
+                    &::after
+                    {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                        width: .3rem;
+                        background-color: var(--secondary-color);
+
+                    }
                 }
+                
+                &.active
+                {
+                    background-color: var(--alpha-bg-02);
+                }
+
+                
 
 
             }
@@ -79,16 +139,66 @@
 
     ul.sub-menu
     {
-        
-        margin-left: 4rem;
+        margin-left: 6rem;
+
+        li.menu-item
+        {
+            display: flex;
+            align-items: center;
+
+            a.menu-link
+            {
+                position: relative;
+                padding: .5rem 1rem;
+
+                &::before
+                {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(-50%);
+                }
+
+                &:hover
+                {
+                    text-decoration: underline;
+                }
+            }
+        }
     }
 }
 
 
-// Header Content
-header#header-content
+// Create Playlist
+a.create-playlist
 {
+    display: flex;
+    gap: .8rem;
+    color: white;
+    padding: 2rem;
 
+    i
+    {
+        font-size: 120%;
+    }
+
+    &:hover
+    {
+        text-decoration: underline;
+    }
+
+}
+
+// Header Content
+section#header-content
+{
+    div.col-right
+    {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
 }
 
 // Search
@@ -117,10 +227,10 @@ form.search
             outline: none;
             border: none;
             color: var(--text-color);
-
+            
         }
 
-        div.input-wrapper
+        div.search-field
         {
             flex-grow: 1;
 
@@ -145,4 +255,138 @@ form.search
         display: none;
     }
 
+}
+
+// Button Groups
+div.button-groups
+{
+    button
+    {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 100rem;
+        background-color: var(--alpha-bg-02);
+        border: none;
+        outline: none;
+    }
+}
+
+// List Song
+ul.list-songs
+{
+    padding: 0 1rem;
+
+    max-height: 50rem;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    
+    &::-webkit-scrollbar 
+    {
+        display: none;
+    }
+
+    li.song
+    {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: .4rem .8rem;
+        border-radius: .4rem;
+
+        div.song-status
+        {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+
+            i.icon
+            {
+                position: absolute;
+                inset: 0;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%) scale(1.4);  
+                background-image: url(../img/play-fill.svg);
+                background-size: contain;
+                opacity: 0;
+
+                &.playing
+                {
+                    background-image: url(../img/icon-playing.gif);
+                    background-size: contain;
+                    transform: translate(-50%,-50%);   
+                }                
+            }
+        }
+
+        div.song-thumb
+        {
+            position: relative;
+            cursor: pointer;
+
+            figure
+            {
+                width: 4rem;
+                height: 4rem;
+                border-radius: .3rem;
+                margin: 0;
+                
+                img
+                {   width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: .3rem;
+                }
+            }
+        }
+
+        div.song-info
+        {
+            &__name
+            {
+                font-weight: 600;
+            }
+
+            &__artist
+            {
+                opacity: .75;
+                font-size: 90%;
+            }
+        }
+
+        &:hover,
+        &.song-active
+        {
+            background-color: var(--alpha-bg-02);
+            backdrop-filter: 1rem;
+
+            div.overlay-thumb
+            {
+                background-color: rgba(0,0,0,.5);
+                position: absolute;
+                inset: 0;
+                border-radius: .3rem;
+                z-index: 1;
+            }
+
+            div.song-status
+            {
+                i.icon
+                {
+                    opacity: 1;
+                }
+            }
+        }
+
+        &.song-active
+        {
+            background-color: transparent;
+            background-image: radial-gradient( circle 757px at 14.6% 44.8%,  rgba(60,77,115,1) 27.7%, rgba(0,194,209,1) 95.9% );
+        }
+
+    }
 }

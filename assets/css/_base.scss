@@ -44,3 +44,66 @@ button, input, optgroup, select, textarea
     background-color: transparent;
     word-break: normal;
 }
+
+.t-center
+{
+    text-align: center;
+}
+
+.fw-400
+{
+    font-weight: normal;
+}
+
+.btn
+{
+    padding: 0 1rem;
+    border: 1px solid currentColor;
+    border-radius: .4rem;
+    cursor: pointer;    
+}
+
+.btn-cricle
+{
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 999px;
+}
+
+.divider
+{
+    display: block;
+    width: 90%;
+    height: 0.1rem;
+    margin: 0 auto;
+    background-image: linear-gradient( to right, transparent, white , transparent);
+}
+
+.d-flex
+{
+    display: flex;
+}
+
+.flex-center
+{
+    justify-content: center;
+    align-items: center;
+}
+
+.gap-10
+{
+    gap: 1rem;
+}
+.gap-20
+{
+    gap: 2rem;
+}
+.gap-30
+{
+    gap: 3rem;
+}
+
+.pdl-10
+{
+    padding-left: 1rem;
+}
