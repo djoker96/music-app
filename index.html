@@ -19,6 +19,7 @@
         <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./assets/css/gird.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>MUSIC APP</title>
 </head>
@@ -28,6 +29,7 @@
         <div class="overlay"></div>
         <div class="box">
 
+            <!-- ASIDE LEFT -->
             <aside id="aside" class="aside left">
 
                 <div class="box-start">
@@ -74,7 +76,7 @@
                                             </g>
                                         </svg>
                                     </span>
-                                    <span class="title-link">
+                                    <span class="slider-item__song-link">
                                         Trang Chủ
                                     </span>
                                 </a>
@@ -105,7 +107,7 @@
                                             </g>
                                         </svg>
                                     </span>
-                                    <span class="title-link">
+                                    <span class="slider-item__song-link">
                                         My Playlist
                                     </span>
                                 </a>
@@ -120,7 +122,7 @@
                                     </li>
                                     <li class="menu-item">
                                         <i class="bi bi-music-note-list"></i>
-                                        <a href="#" class="menu-link">Chill</a>
+                                        <a href="#" class="menu-link">Lofi Chill</a>
                                     </li>
                                     <li class="menu-item">
                                         <i class="bi bi-music-note-list"></i>
@@ -178,7 +180,7 @@
                                     </div>
                                     <ul class="suggest__list">
                                         <div class="suggest__list--content">
-                                            <div class="search__title">Đề xuất cho bạn</div>
+                                            <div class="search__slider-item__song">Đề xuất cho bạn</div>
                                             <li class="suggest__item">
                                                 <i class="icon ic-trend"></i>
                                                 <div class="is-oneline">
@@ -210,6 +212,78 @@
                 </section>
 
                 <section id="main-content">
+                    
+                    <!-- TAB HOME -->
+
+                    <div class="tab-home">
+
+                        <!-- HERO SLIDER -->
+                        <div class="hero">
+                            <div class="dj-sliders">
+                                <div class="slider-item">
+                                    <figure class="slider-item__image">
+                                        <img src="data/featured/song/ai-chung-tinh-duoc-mai.jpg">
+                                        <figcaption class="slider-item__song">Ai Chung Tình Được Mãi</figcaption>
+                                        <figcaption class="slider-item__artist">Thương Võ</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="slider-item">
+                                    <figure class="slider-item__image">
+                                        <img src="data/featured/song/de-vuong.jpg">
+                                        <figcaption class="slider-item__song">Đế Vương</figcaption>
+                                        <figcaption class="slider-item__artist">Đinh Tùng Huy</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="slider-item">
+                                    <figure class="slider-item__image">
+                                        <img src="data/featured/song/cam-on-ton-thuong.jpg">
+                                        <figcaption class="slider-item__song">Cảm Ơn Tổn Thương</figcaption>
+                                        <figcaption class="slider-item__artist">Thương Võ</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="slider-item">
+                                    <figure class="slider-item__image">
+                                        <img src="data/featured/song/tuong-quan.jpg">
+                                        <figcaption class="slider-item__song">Tướng Quân</figcaption>
+                                        <figcaption class="slider-item__artist">Đình Dũng</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="slider-item">
+                                    <figure class="slider-item__image">
+                                        <img src="data/featured/song/my-nhan.jpg">
+                                        <figcaption class="slider-item__song">Mỹ Nhân</figcaption>
+                                        <figcaption class="slider-item__artist">Đình Dũng</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="slider-item">
+                                    <figure class="slider-item__image">
+                                        <img src="data/featured/song/doa-quynh-lan.jpg">
+                                        <figcaption class="slider-item__song">Đóa Quỳnh Lan</figcaption>
+                                        <figcaption class="slider-item__artist">Út Nhị</figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- LISTING PLAYLIST -->
+                        <div class="listing-playlist pd-30">
+                            <h3 class="listing-playlist__title t-uppercase">Playlist</h3>
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                 </section>
 
@@ -217,10 +291,10 @@
 
             <!-- ASIDE RIGHT -->
             <aside id="aside" class="aside right">
-                
                 <h3 class="d-flex flex-center fw-400">
+                
                     <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512" width="24" height="24"><circle cx="256" cy="256.02" r="32"/><path d="M184.25 192.25a96 96 0 000 127.52M327.77 319.77a96 96 0 000-127.52M133.28 141.28a168 168 0 000 229.44M378.72 370.72a168 168 0 000-229.44M435 416a240.34 240.34 0 000-320M77 96a240.34 240.34 0 000 320" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/></svg>
-                    <span class="title pdl-10">
+                    <span class="slider-item__song pdl-10">
                         Danh sách phát
                     </span>
                 </h3>
@@ -384,10 +458,16 @@
                 
             </aside>
 
+
+            <!-- FOOTER -->
             <footer id="footer"></footer>
 
         </div>
     </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript"src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="assets/js/app.js"></script>
 </body>
 
 </html>

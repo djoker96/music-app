@@ -70,7 +70,6 @@
     }
 }
 
-
 // Menu
 .main-menu
 {
@@ -168,7 +167,6 @@
         }
     }
 }
-
 
 // Create Playlist
 a.create-playlist
@@ -278,8 +276,8 @@ div.button-groups
 ul.list-songs
 {
     padding: 0 1rem;
-
-    max-height: 50rem;
+    height: auto;
+    max-height: 65rem;
     overflow: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
